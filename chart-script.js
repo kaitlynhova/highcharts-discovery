@@ -1,5 +1,8 @@
 $(function () {
         $('#container').highcharts({
+            tooltip: {
+                crosshairs: true
+            },
             chart:{
               zoomType: 'x'
             },
@@ -28,14 +31,10 @@ $(function () {
                     color: '#808080'
                 }]
             },
-            tooltip: {
-                valueSuffix: '°C'
-            },
             legend: {
                 layout: 'vertical',
                 align: 'right',
                 verticalAlign: 'middle',
-                borderWidth: 0
             },
             plotOptions:{
                 series:{
