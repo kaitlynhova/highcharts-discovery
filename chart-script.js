@@ -42,7 +42,7 @@ $(function () {
                     point: {
                         events:{
                             click: function () {
-                              alert('Category: ' + this.category + ', value: ' + this.y);
+                              document.getElementById("dat-data").innerHTML = 'Category: ' + this.category + ', value: ' + this.y;
                             }
                         }
                     }
