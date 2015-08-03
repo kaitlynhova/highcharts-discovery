@@ -1,5 +1,8 @@
 $(function () {
         $('#container').highcharts({
+            legend: {
+                enabled: false
+            },
             title: {
                 text: 'BlackBox Log analyzer',
                 x: -20 //center
@@ -58,12 +61,46 @@ $(function () {
             }]
         });
 
-        $('#button-cats').click(function () {
+        $('#pitch').click(function() {
            var chart = $('#container').highcharts();
-           chart.addSeries({
-             name: 'cats',
-             data: [10.0, 12, 12, 16, 2, 23, 3, 10, 8, 12, 10, 5],
-           });
-           $(this).attr('disabled', true);
+           var series = chart.series;
+           var seriesIndex = 0
+           if(series[seriesIndex].visible) {
+               series[seriesIndex].hide();
+           } else {
+               series[seriesIndex].show();
+           }
        });
+
+       $('#yaw').click(function() {
+          var chart = $('#container').highcharts();
+          var series = chart.series;
+          var seriesIndex = 1
+          if(series[seriesIndex].visible) {
+              series[seriesIndex].hide();
+          } else {
+              series[seriesIndex].show();
+          }
+      });
+      $('#gps').click(function() {
+         var chart = $('#container').highcharts();
+         var series = chart.series;
+         var seriesIndex = 2
+         if(series[seriesIndex].visible) {
+             series[seriesIndex].hide();
+         } else {
+             series[seriesIndex].show();
+         }
+     });
+     $('#turkey').click(function() {
+        var chart = $('#container').highcharts();
+        var series = chart.series;
+        var seriesIndex = 3
+        if(series[seriesIndex].visible) {
+            series[seriesIndex].hide();
+        } else {
+            series[seriesIndex].show();
+        }
+    });
+
     });
