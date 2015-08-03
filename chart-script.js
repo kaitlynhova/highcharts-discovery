@@ -104,6 +104,6 @@ $(function () {
         } else {
             series[seriesIndex].show();
         }
-    });
+      });
 
     });
