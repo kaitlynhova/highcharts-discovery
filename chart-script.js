@@ -1,108 +1,60 @@
 $(function () {
-
-    // Get the CSV and create the chart
-    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=analytics.csv&callback=?', function (csv) {
-
         $('#container').highcharts({
-
-            data: {
-                csv: csv
-            },
-
             title: {
-                text: 'Daily visits at www.highcharts.com'
+                text: 'BlackBox Log analyzer',
+                x: -20 //center
             },
-
             subtitle: {
-                text: 'Source: Google Analytics'
+                text: 'example',
+                x: -20
             },
-
             xAxis: {
-                tickInterval: 7 * 24 * 3600 * 1000, // one week
-                tickWidth: 0,
-                gridLineWidth: 1,
-                labels: {
-                    align: 'left',
-                    x: 3,
-                    y: -3
-                }
+                categories: ['1', '2', '3', '4', '5', '6',
+                    '7', '8', '9', '10', '11', '12']
             },
-
-            yAxis: [{ // left y axis
+            yAxis: {
                 title: {
-                    text: null
+                    text: 'Temperature (°C)'
                 },
-                labels: {
-                    align: 'left',
-                    x: 3,
-                    y: 16,
-                    format: '{value:.,0f}'
-                },
-                showFirstLabel: false
-            }, { // right y axis
-                linkedTo: 0,
-                gridLineWidth: 0,
-                opposite: true,
-                title: {
-                    text: null
-                },
-                labels: {
-                    align: 'right',
-                    x: -3,
-                    y: 16,
-                    format: '{value:.,0f}'
-                },
-                showFirstLabel: false
-            }],
-
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: '°C'
+            },
             legend: {
-                align: 'left',
-                verticalAlign: 'top',
-                y: 20,
-                floating: true,
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
                 borderWidth: 0
             },
-
-            tooltip: {
-                shared: true,
-                crosshairs: true
-            },
-
-            plotOptions: {
-                series: {
-                    cursor: 'pointer',
+            plotOptions:{
+                series:{
+                    allowPointSelect: true,
                     point: {
-                        events: {
-                            click: function (e) {
-                                hs.htmlExpand(null, {
-                                    pageOrigin: {
-                                        x: e.pageX || e.clientX,
-                                        y: e.pageY || e.clientY
-                                    },
-                                    headingText: this.series.name,
-                                    maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
-                                        this.y + ' visits',
-                                    width: 200
-                                });
+                        events:{
+                            select: function(e) {                                $("#displayText").html(e.currentTarget.y)
                             }
                         }
-                    },
-                    marker: {
-                        lineWidth: 1
                     }
                 }
             },
-
             series: [{
-                name: 'All visits',
-                lineWidth: 4,
-                marker: {
-                    radius: 4
-                }
+                name: 'Pitch',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                //url: [http://test.com/, http://test2.com/]
             }, {
-                name: 'New visitors'
+                name: 'Yaw',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+            }, {
+                name: 'GPS',
+                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+            }, {
+                name: 'Turkey',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
             }]
         });
     });
-
-});
