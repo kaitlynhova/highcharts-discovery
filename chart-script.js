@@ -42,8 +42,8 @@ $(function () {
                     allowPointSelect: true,
                     point: {
                         events:{
-                            select: function(e) {
-                              $("#displayText").html(e.currentTarget.y)
+                            click: function () {
+                              alert('Category: ' + this.category + ', value: ' + this.y);
                             }
                         }
                     }
