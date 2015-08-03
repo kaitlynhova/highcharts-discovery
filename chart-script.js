@@ -1,5 +1,8 @@
 $(function () {
         $('#container').highcharts({
+            chart:{
+              zoomType: 'x'
+            },
             legend: {
                 enabled: false
             },
