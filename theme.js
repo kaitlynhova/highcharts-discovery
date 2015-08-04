@@ -85,7 +85,7 @@ Highcharts.theme = {
             color: '#B0B0B3'
          },
          marker: {
-            lineColor: '#333'
+            lineColor: 'white'
          }
       },
       boxplot: {
