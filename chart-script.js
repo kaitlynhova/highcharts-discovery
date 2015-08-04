@@ -3,8 +3,31 @@ $(function () {
             tooltip: {
                 crosshairs: true
             },
+            credits: {
+                 enabled: false
+             },
             chart:{
-              zoomType: 'x'
+              zoomType: 'x',
+              resetZoomButton: {
+                theme: {
+                    fill: '#df3f3f',
+                    stroke: '#df3f3f',
+                    style: {
+                        color: 'white',
+                        fontFamily:  "sans-serif"
+                    },
+                    r: 0,
+                    states: {
+                        hover: {
+                            fill: '#41739D',
+                            style: {
+                                color: 'white',
+                                fontFamily:  "sans-serif"
+                            }
+                        }
+                    }
+                }
+              }
             },
             legend: {
                 enabled: false
@@ -42,7 +65,7 @@ $(function () {
                     marker: {
                         states: {
                             select: {
-                                fillColor: 'red',
+                                fillColor: 'black',
                                 lineWidth: 0
                             }
                         }
