@@ -28,14 +28,14 @@ Highcharts.theme = {
    },
    title: {
       style: {
-         color: '#E0E0E3',
+         color: 'gray',
          textTransform: 'uppercase',
          fontSize: '20px'
       }
    },
    subtitle: {
       style: {
-         color: '#E0E0E3',
+         color: 'gray',
          textTransform: 'uppercase'
       }
    },
@@ -47,7 +47,7 @@ Highcharts.theme = {
          }
       },
       lineColor: '#707073',
-      minorGridLineColor: '#505053',
+      minorGridLineColor: '#e6e6e6',
       tickColor: '#707073',
       title: {
          style: {
@@ -57,10 +57,10 @@ Highcharts.theme = {
       }
    },
    yAxis: {
-      gridLineColor: '#707073',
+      gridLineColor: '#e6e6e6',
       labels: {
          style: {
-            color: '#E0E0E3'
+            color: 'gray'
          }
       },
       lineColor: '#707073',
@@ -69,7 +69,7 @@ Highcharts.theme = {
       tickWidth: 1,
       title: {
          style: {
-            color: '#A0A0A3'
+            color: 'gray'
          }
       }
    },
