@@ -43,7 +43,7 @@ Highcharts.theme = {
       gridLineColor: '#707073',
       labels: {
          style: {
-            color: '#E0E0E3'
+            color: '#333333'
          }
       },
       lineColor: '#707073',
@@ -51,7 +51,7 @@ Highcharts.theme = {
       tickColor: '#707073',
       title: {
          style: {
-            color: '#A0A0A3'
+            color: '#333333'
 
          }
       }
@@ -60,16 +60,16 @@ Highcharts.theme = {
       gridLineColor: '#e6e6e6',
       labels: {
          style: {
-            color: 'gray'
+            color: '#333'
          }
       },
       lineColor: '#707073',
-      minorGridLineColor: '#505053',
+      minorGridLineColor: '#e6e6e6',
       tickColor: '#707073',
       tickWidth: 1,
       title: {
          style: {
-            color: 'gray'
+            color: '#333333'
          }
       }
    },
