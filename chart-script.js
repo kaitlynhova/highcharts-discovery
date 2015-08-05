@@ -146,10 +146,6 @@ $(function () {
          var series = chart.series;
          var seriesIndex = [3,1]
 
-         //clear the graph
-         for (i = 0; i < series.length; i++){
-           series[i].hide();
-         }
 
          //Show just the group stuff
          for (i = 0; i < seriesIndex.length; i++) {
