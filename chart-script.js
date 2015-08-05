@@ -141,11 +141,18 @@ $(function () {
         }
       });
 
+      $('#clearit').click(function() {
+        var chart = $('#container').highcharts();
+        var series = chart.series;
+         for (i = 0; i < series.length; i++){
+           series[i].hide();
+         }
+       });
+
       $('#turkeyandyaw').click(function() {
          var chart = $('#container').highcharts();
          var series = chart.series;
          var seriesIndex = [3,1]
-
 
          //Show just the group stuff
          for (i = 0; i < seriesIndex.length; i++) {
