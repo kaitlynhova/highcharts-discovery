@@ -57,7 +57,8 @@ Highcharts.theme = {
       }
    },
    yAxis: {
-      gridLineColor: '#e6e6e6',
+      lineColor: '#e6e6e6',
+      lineColor: '#333333',
       labels: {
          style: {
             color: '#333'

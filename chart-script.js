@@ -141,4 +141,20 @@ $(function () {
         }
       });
 
+      $('#turkeyandyaw').click(function() {
+         var chart = $('#container').highcharts();
+         var series = chart.series;
+         var seriesIndex = [3,1]
+
+         for (i = 0; i < seriesIndex.length; i++) {
+            console.log(series[seriesIndex[i]]);
+            if(series[seriesIndex[i]].visible) {
+                series[seriesIndex[i]].hide();
+            } else {
+                series[seriesIndex[i]].show();
+            }
+          }
+
+       });
+
     });
