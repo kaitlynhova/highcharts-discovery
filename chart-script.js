@@ -156,6 +156,7 @@ $(function () {
 
          //Show just the group stuff
          for (i = 0; i < seriesIndex.length; i++) {
+
             if(series[seriesIndex[i]].visible) {
                 series[seriesIndex[i]].hide();
             } else {
